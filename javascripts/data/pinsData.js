@@ -4,10 +4,10 @@ const loadPinsForBoard = boardId => {
       .done(data => {
         // use == (not ===) because jQuery returns values as string, boardId gets returned as integer
         const pinsForBoards = data.pins.filter(pin => pin.board_id == boardId);
-        console.log(pinsForBoards);
+        resolve(pinsForBoards);
       })
       .fail(error => {
-        console.log(error);
+        reject(error);
       });
   });
 };
