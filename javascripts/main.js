@@ -1,1 +1,7 @@
-console.log('js linked!')
+import { initialBoardView } from "./components/boards.js";
+
+const initializeApp = () => {
+    initialBoardView();
+}
+
+initializeApp();
