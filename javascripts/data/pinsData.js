@@ -22,6 +22,7 @@ const loadPinsOnBoards = boards => {
           const matchingPins = data.pins.filter(
             pin => pin.board_id === board.id
           );
+        //   taking board object and assigning new key (pins) to it and setting it equal to matchingPins
           board.pins = matchingPins;
           return board;
         });
