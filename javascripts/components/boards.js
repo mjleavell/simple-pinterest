@@ -33,13 +33,13 @@ const writeBoards = (boards) => {
 };
 
 const initialBoardView = () => {
-  loadBoards()
-    .then(boards => {
+  loadBoards().then(boards => {
         return loadPinsOnBoards(boards);
     }).then((boardsWithPins) => {
     //   console.log(boardsWithPins);
       writeBoards(boardsWithPins);
       bindEvents();
+    // line 38, 40, 41 are all part of the resolve for loadPinsOnBoards
     })
     .catch(error => {
       console.log(error);
